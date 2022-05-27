@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2016 Phil Shadlyn
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/margin_view_typical"
+    android:paddingBottom="@dimen/margin_view_small"
+    android:stretchColumns="*">
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/header_text_unit_from"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_view_typical"
+            android:layout_marginRight="@dimen/margin_view_typical"
+            tools:text="Canadian Dollar"/>
+
+        <TextView
+            android:id="@+id/header_text_unit_to"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_view_typical"
+            android:layout_marginRight="@dimen/margin_view_typical"
+            tools:text="Euro"/>
+
+    </TableRow>
+
+    <TableRow>
+
+        <EditText
+            android:id="@+id/header_value_from"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/margin_view_small"
+            android:layout_marginRight="@dimen/margin_view_small"
+            android:inputType="numberSigned|numberDecimal"
+            android:maxLength="@integer/num_digits_from"
+            android:layout_gravity="bottom"
+            android:scrollHorizontally="true"
+            android:text="@string/default_value">
+
+            <requestFocus/>
+
+        </EditText>
+
+        <!-- Use EditText instead of TextView to allow horizontal scrolling if answer is too long -->
+        <EditText
+            android:id="@+id/header_value_to"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_view_small"
+            android:layout_marginRight="@dimen/margin_view_small"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:inputType="none"
+            android:scrollHorizontally="true"/>
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/header_text_from"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_view_typical"
+            android:layout_marginRight="@dimen/margin_view_typical"
+            android:layout_marginTop="@dimen/margin_view_typical"
+            android:text="@string/text_from"/>
+
+        <TextView
+            android:id="@+id/header_text_to"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_view_typical"
+            android:layout_marginRight="@dimen/margin_view_typical"
+            android:layout_marginTop="@dimen/margin_view_typical"
+            android:text="@string/text_to"/>
+
+    </TableRow>
+
+</TableLayout>
